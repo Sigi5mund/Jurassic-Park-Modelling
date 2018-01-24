@@ -22,10 +22,12 @@ Park.prototype.findDinosaursWith2orMoreOffspring = function () {
 };
 
 Park.prototype.removeByType = function(type) {
+var dinosaurToKeep =[];
   for (dinosaur of this.enclosure){
-    if (dinosaur.type == type )
-    array.delete(dinosaur);
+    if (dinosaur.type != type )
+    dinosaurToKeep(dinosaur);
 };
+this.enclosure = dinosaurToKeep;
 }
 
 Park.prototype.calculateDinosaurs = function(years){
